@@ -1,0 +1,37 @@
+---
+title: "World Happiness Report"
+author: 'Thiago Montenegro'
+date: "02 de Julho de 2019"
+output:
+  html_document:
+    theme: flatly
+    df_print: paged
+    code_folding: "hide"
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+  phtml_notebook:
+    toc: yes
+    toc_depth: 5
+    fig_width: 7
+css: r-markdown.css
+
+---
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(broom)
+library(modelr)
+library(corrplot)
+
+theme_set(theme_bw())
+```
+
+# 0. Os dados
+```{r warning = FALSE}
+  report = read_csv((file.choose()))
+```
+
